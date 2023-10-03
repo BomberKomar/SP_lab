@@ -8,7 +8,9 @@ def main():
         file_content = file.read()
         words = re.findall(f'(?<!\w){Vowels}+(?!\w)', file_content, re.IGNORECASE)
 
-        print(words)
+        unique_words = set(word.lower() for word in words)
+        
+        print(set(unique_words))
 
 if __name__ == "__main__":
     main()
