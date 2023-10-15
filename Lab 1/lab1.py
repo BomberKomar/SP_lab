@@ -1,6 +1,6 @@
 import re
 
-Vowels='[eyuioaаеєиіїоуюя]'
+Vowels='[eyuioaаеєиіїоуюя]' 
 
 def main():
     file_name = input("Enter your filename: \n")
@@ -9,7 +9,7 @@ def main():
         words = re.findall(f'(?<!\w){Vowels}+(?!\w)', file_content, re.IGNORECASE)
 
         unique_words = set(word.lower() for word in words)
-        
+
         print(set(unique_words))
 
 if __name__ == "__main__":
