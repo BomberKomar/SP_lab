@@ -67,7 +67,7 @@ std::vector<bool> findDeadEndStates(const FSM& fsm, const std::vector<std::vecto
 }
 
 int main() {
-    FSM fsm = readFSM("automata.txt"); 
+    FSM fsm = readFSM("./automata.txt"); 
     
     std::vector<std::vector<int>> graph(fsm.numStates);
     
@@ -102,6 +102,8 @@ int main() {
         }
     }
     std::cout << std::endl;
+
+    std::cin.get(); 
 
     return 0;
 }
